@@ -1,0 +1,106 @@
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons";
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+// ===== all page (for sticky footer)
+.page {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+
+//==== all header to footer
+.mycontainer {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+}
+
+
+//==== main page (incl. searchinput, gallery) to add sidebar
+.mainpage {
+  min-width: 90%;
+  margin-bottom: 30px;
+}
+
+//==== styles of header
+.navbar {
+  background: $indigo-100;
+}
+
+.nav-link {
+  width: 60px;
+  height: 60px;
+  
+}
+
+//==== sidebar effects
+.menu {
+  width: auto;
+  padding: 10px;
+}
+
+.nav-pills .nav-link.active, .nav-pills.show > .nav-link {
+  background-color: $indigo-100;
+}
+
+//==== remove standart border of input
+.form-control {
+  &:focus {
+    border-color:#ced4da;
+  }
+}
+
+//==== copyright
+.myfooter {
+  height: 5vh;
+}
+
+.copyright {
+  font-size: 12px;
+}
+
+//==== card with image
+.card-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  button {
+    width: 60%;
+  }
+}
+
+//==== to avoid empty spaces in gallery
+.image::after {
+  content: '';
+  width: 30%;
+}
+
